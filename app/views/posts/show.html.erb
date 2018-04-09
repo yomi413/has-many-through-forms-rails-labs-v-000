@@ -1,3 +1,16 @@
+<%= form_for @comment do |f| %>
+  <%= f.text_field :content %>
+  <%= f.hidden_field :post_id %>
+
+  <%= f.collection_select :user_id, User.all, :id, :username %>
+
+  <%= f.fields_for :user do |user_fields| %>
+    <%= user_fields.text_field :username %>
+  <% end %>
+
+  <%= f.submit %>
+<% end %>
+
 <h1><%= @post.title %></h1>
 
 <p><%= @post.content %></p>
