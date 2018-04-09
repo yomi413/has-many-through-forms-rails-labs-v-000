@@ -21,13 +21,6 @@ Categories:<br />
   <% end %>
 </ul>
 
-Comments:<br />
-<ul>
-  <% @post.comments.each do |comment| %>
-    <li><%= comment.content %></li>
-  <% end %>
-</ul>
-
 Users:<br />
 <ul>
   <% @post.users.uniq.each do |user| %>
