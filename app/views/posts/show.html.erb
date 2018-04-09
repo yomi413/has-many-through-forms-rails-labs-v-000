@@ -2,7 +2,7 @@
   <%= f.text_field :content %>
   <%= f.hidden_field :post_id %>
 
-  <%= f.collection_select :user_id, User.all, :id, :username %> says: 
+  <%= f.collection_select :user_id, User.all, :id, :username %> says:
     <% @post.comments.each do |comment| %>
       <%= comment.content %>
     <% end %>
@@ -38,4 +38,3 @@ Users:<br />
     <li><%= link_to user.username, user_path(user) %></li>
   <% end %>
 </ul>
-
