@@ -31,6 +31,6 @@ Comments:<br />
 Users:<br />
 <ul>
   <% @post.users.uniq.each do |user| %>
-    <li><%= link_to user.username, user_path(user) %></li>
+    <li><%= link_to user.username, user_path %></li>
   <% end %>
 </ul>
