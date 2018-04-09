@@ -7,6 +7,10 @@
       <%= comment.content %>
     <% end %>
 
+  <%= f.fields_for :user do |user| %>
+    <%= user.text_field :username %>
+  <% end %>
+
   <%= f.submit %>
 <% end %>
 
